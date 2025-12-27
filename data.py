@@ -113,6 +113,7 @@ parameters = {
 
 def get_data():
     response = requests.get(url=endpoint,params=parameters)
+    response.raise_for_status()
     data = response.json()
     question_data = data["results"]
     return question_data
