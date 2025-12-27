@@ -112,6 +112,7 @@ parameters = {
 }
 
 def get_data():
+    print("Fetching question data...")
     response = requests.get(url=endpoint,params=parameters)
     response.raise_for_status()
     data = response.json()
